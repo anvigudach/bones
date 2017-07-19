@@ -1,3 +1,8 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA:http://localhost:8761/eureka/}
+
 server:
   port: ${PORT:8080}
 
@@ -7,8 +12,7 @@ spring:
   cloud:
     config:
       discovery:
-        enabled: false
+        enabled: true
         serviceId: configserver
       enabled: true
       failFast: true
-      uri: ${SPRING_CONFIG_URI:http://localhost:8888}
