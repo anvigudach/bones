@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: bones
+  cloud:
+    config:
+      discovery:
+        enabled: false
+        serviceId: configserver
+      enabled: true
+      failFast: true
+      uri: ${SPRING_CONFIG_URI:http://localhost:8888}
