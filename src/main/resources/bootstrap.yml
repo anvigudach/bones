@@ -1,0 +1,18 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA:http://localhost:8761/eureka/}
+
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: bones
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: configserver
+      enabled: true
+      failFast: true
